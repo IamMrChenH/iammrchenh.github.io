@@ -12,7 +12,7 @@ tags:
 ## 安装命令
 
 * sudo npm install --unsafe-perm --verbose -g hexo
-
+* npm install hexo-generator-searchdb --save
 * npm install `--`save hexo-deployer-git
 
 ## 创建一个项目
