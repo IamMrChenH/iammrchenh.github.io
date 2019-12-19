@@ -169,8 +169,8 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  # url: #/images/avatar.gif
-  url: https://avatar.gitee.com/uploads/42/559742_zhaoguiyang.png?1530779648
+  url: /images/head.jpg
+#  url: https://avatar.gitee.com/uploads/42/559742_zhaoguiyang.png?1530779648
   # If true, the avatar would be dispalyed in circle.
   rounded: true
   # If true, the avatar would be rotated with the cursor.
