@@ -99,6 +99,5 @@ theme: next
 deploy:
   type: 'git'
   branch: master
-  message: 提交信息
   repo:
     gitee: https://gitee.com/IamMrChen/IamMrChen
