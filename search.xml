@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hexo的使用和配置</title>
+    <url>/2019/12/19/hexo-install-config/</url>
+    <content><![CDATA[<p>[toc]</p>
+<h1 id="hexo-的使用"><a href="#hexo-的使用" class="headerlink" title="hexo 的使用"></a>hexo 的使用</h1><h2 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h2><ul>
+<li>sudo npm install –unsafe-perm –verbose -g hexo</li>
+<li>npm install hexo-generator-searchdb –save</li>
+<li>npm install <code>--</code>save hexo-deployer-git</li>
+</ul>
+<h2 id="创建一个项目"><a href="#创建一个项目" class="headerlink" title="创建一个项目"></a>创建一个项目</h2><ul>
+<li>hexo init  项目名称</li>
+</ul>
+<h2 id="运行项目-hexo-s"><a href="#运行项目-hexo-s" class="headerlink" title="运行项目(hexo s)"></a>运行项目(hexo s)</h2><ul>
+<li>hexo server</li>
+</ul>
+<p>此时访问 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就会出现hexo的默认网页</p>
+<h2 id="编译发布命令"><a href="#编译发布命令" class="headerlink" title="编译发布命令"></a>编译发布命令</h2><ul>
+<li>hexo clean </li>
+<li>hexo generate </li>
+<li>hexo deploy</li>
+</ul>
+<h2 id="发布设置"><a href="#发布设置" class="headerlink" title="发布设置"></a>发布设置</h2><ul>
+<li><p>进入项目_config.yml文件</p>
+</li>
+<li><p>修改deploy配置</p>
+</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#发布选择</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">'git'</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment">#你的分支</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">提交信息</span></span><br><span class="line">  <span class="attr">repo:</span></span><br><span class="line">    <span class="attr">gitee:</span> <span class="string">https://gitee.com/IamMrChen/IamMrChen</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="标签页"><a href="#标签页" class="headerlink" title="标签页"></a>标签页</h2><ul>
+<li><p>添加标签页</p>
+</li>
+<li><p>运行 hexo new page tags</p>
+</li>
+<li><p>生成 source/tags/index.md 文件和文件夹</p>
+</li>
+<li><p>配置index.md</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2019-12-19 20:22:08</span><br><span class="line">type: "tags"</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重新运行 hexo s,就可以进入标签页面了</p>
+</li>
+</ul>
+<hr>
+<h2 id="分类页"><a href="#分类页" class="headerlink" title="分类页"></a>分类页</h2><ul>
+<li>添加标签页</li>
+<li>运行 hexo new page categories</li>
+<li>生成 source/categories/index.md 文件和文件夹</li>
+<li>配置index.md</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2019-12-19 20:22:08</span><br><span class="line">type: "categories"</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>重新运行 hexo s,就可以进入分类页面了</li>
+</ul>
+<h2 id="归档页"><a href="#归档页" class="headerlink" title="归档页"></a>归档页</h2><ul>
+<li>添加标签页</li>
+<li>运行 hexo new page archives</li>
+<li>生成 source/archives/index.md 文件和文件夹</li>
+<li>配置index.md</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2019-12-19 20:22:08</span><br><span class="line">type: "archives"</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>重新运行 hexo s,就可以进入归档页面了</li>
+</ul>
+<h2 id="关于页"><a href="#关于页" class="headerlink" title="关于页"></a>关于页</h2><ul>
+<li>添加标签页</li>
+<li>运行 hexo new page about</li>
+<li>生成 source/about/index.md 文件和文件夹</li>
+<li>配置index.md</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2019-12-19 20:22:08</span><br><span class="line">type: "about"</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>重新运行 hexo s,就可以进入关于页面了，<a href="https://iammrchen.gitee.io/about/">https://iammrchen.gitee.io/about/</a></li>
+</ul>
+<hr>
+<h1 id="切换next主题和配置"><a href="#切换next主题和配置" class="headerlink" title="切换next主题和配置"></a>切换next主题和配置</h1><h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><ul>
+<li><p>进入hexo项目目录</p>
+</li>
+<li><p>下载主题</p>
+</li>
+<li><p>git clone <a href="https://gitee.com/zhaoguiyang/hexo-theme-next" target="_blank" rel="noopener">https://gitee.com/zhaoguiyang/hexo-theme-next</a> theme/next</p>
+</li>
+<li><p>修改hexo项目下_config.yml 文件配置</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">博客名称</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">'博客副名称.'</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">'博客说明！'</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="string">用于被搜索引擎抓取的关键字</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">文章作者名称</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment">#选择中文</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">''</span></span><br><span class="line"><span class="comment"># 文章底部版权信息地址</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://iammrchen.gitee.io/</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="修改导航栏显示"><a href="#修改导航栏显示" class="headerlink" title="修改导航栏显示"></a>修改导航栏显示</h2><ul>
+<li>进入项目主题下的next目录，选择文件themes/next/_config.yml</li>
+<li>找到menu配置，修改配置</li>
+<li>不显示可以选择删除或者注释掉<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span>	<span class="comment">#首页</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span> <span class="comment">#标签</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span> <span class="comment">#归档</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span> <span class="comment">#分类</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span> <span class="comment">#关于</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="string">/schedule/</span> <span class="string">||</span> <span class="string">calendar</span> <span class="comment">#时间表</span></span><br><span class="line">  <span class="attr">sitemap:</span> <span class="string">/sitemap.xml</span> <span class="string">||</span> <span class="string">sitemap</span> <span class="comment">#不知道</span></span><br><span class="line">  <span class="attr">commonweal:</span> <span class="string">/404/</span> <span class="string">||</span> <span class="string">heartbeat</span> <span class="comment">#404页面</span></span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<hr>
+<h2 id="开启博客外链-github、微博等"><a href="#开启博客外链-github、微博等" class="headerlink" title="开启博客外链(github、微博等)"></a>开启博客外链(github、微博等)</h2><ul>
+<li>进入项目主题下的next目录，选择文件themes/next/_config.yml</li>
+<li>找到social配置，修改配置</li>
+<li>不显示可以选择删除或者注释掉,自由添加删除。</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">GitHub:</span> <span class="string">https://github.com/Gyang18</span> <span class="string">||</span> <span class="string">github</span></span><br><span class="line">  <span class="attr">gitee:</span> <span class="string">https://gitee.com/zhaoguiyang</span> <span class="string">||</span> <span class="string">gitee</span></span><br><span class="line">  <span class="string">QQ邮箱:</span> <span class="number">2770723534</span><span class="string">@qq.com</span> <span class="string">||</span> <span class="string">envelope</span></span><br><span class="line">  <span class="attr">Weibo:</span> <span class="string">https://weibo.com/yourname</span> <span class="string">||</span> <span class="string">weibo</span></span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="开启博客右上角github图标"><a href="#开启博客右上角github图标" class="headerlink" title="开启博客右上角github图标"></a>开启博客右上角github图标</h2><ul>
+<li>进入项目主题下的next目录，选择文件themes/next/_config.yml</li>
+<li>找到social配置，修改配置</li>
+<li>不显示可以选择删除或者注释掉,自由添加删除。</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">github_banner:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">permalink:</span> <span class="string">https://你的github地址。</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">Follow</span> <span class="string">me</span> <span class="string">on</span> <span class="string">GitHub</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="更换头像"><a href="#更换头像" class="headerlink" title="更换头像"></a>更换头像</h2><ul>
+<li>进入项目主题下的next目录，选择文件themes/next/_config.yml</li>
+<li>找到avatar配置，修改配置</li>
+<li>不显示可以选择删除或者注释掉,自由添加删除。</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">avatar:</span></span><br><span class="line">	<span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="comment"># url: #/images/avatar.gif</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">https://avatar.gitee.com/uploads/42/559742_zhaoguiyang.png?1530779648</span></span><br><span class="line">	<span class="comment"># If true, the avatar would be dispalyed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">	<span class="comment"># If true, the avatar would be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2019/12/19/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+</search>
