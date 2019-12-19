@@ -1,6 +1,9 @@
 ---
 title: Hexo的使用和配置
-date: 2019-12-18
+categories: hexo #分类
+tags:
+  - hexo
+  
 ---
 [toc]
 
