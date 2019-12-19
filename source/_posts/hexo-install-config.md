@@ -207,7 +207,22 @@ github_banner:
   title: Follow me on GitHub
 ```
 
+## 更换头像
 
+* 进入项目主题下的next目录，选择文件themes/next/_config.yml
+* 找到avatar配置，修改配置
+* 不显示可以选择删除或者注释掉,自由添加删除。
+
+```yaml
+avatar:
+	# Replace the default image and set the url here.
+  # url: #/images/avatar.gif
+  url: https://avatar.gitee.com/uploads/42/559742_zhaoguiyang.png?1530779648
+	# If true, the avatar would be dispalyed in circle.
+  rounded: true
+	# If true, the avatar would be rotated with the cursor.
+  rotated: true
+```
 
 ---
 
