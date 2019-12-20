@@ -12,7 +12,7 @@ language: zh-CN
 timezone: ''
 
 # URL
-url: https://iammrchen.gitee.io/
+url: https://iammrchenh.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
