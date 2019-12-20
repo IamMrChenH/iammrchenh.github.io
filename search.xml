@@ -185,7 +185,7 @@
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2019-12-19 20:22:08</span><br><span class="line">type: "about"</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>重新运行 hexo s,就可以进入关于页面了，<a href="https://iammrchen.gitee.io/about/">https://iammrchen.gitee.io/about/</a></li>
+<li>重新运行 hexo s,就可以进入关于页面了，<a href="https://iammrchen.gitee.io/about/" target="_blank" rel="noopener">https://iammrchen.gitee.io/about/</a></li>
 </ul>
 ]]></content>
       <categories>
