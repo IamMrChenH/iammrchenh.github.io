@@ -1,5 +1,6 @@
 ---
 title: Hexo的使用和配置
+date: 2019-12-19
 categories: hexo #分类
 tags:
   - hexo
@@ -46,86 +47,6 @@ deploy:
     gitee: https://gitee.com/IamMrChen/IamMrChen  
 ```
 
----
-## 标签页
-
-* 添加标签页
-* 运行 hexo new page tags
-* 生成 source/tags/index.md 文件和文件夹
-* 配置index.md
-```markdown
----
-title: tags
-date: 2019-12-19 20:22:08
-type: "tags"
----
-```
-
-* 重新运行 hexo s,就可以进入标签页面了
-
-
-
----
-
-## 分类页
-
-* 添加标签页
-* 运行 hexo new page categories
-* 生成 source/categories/index.md 文件和文件夹
-* 配置index.md
-
-```markdown
----
-title: tags
-date: 2019-12-19 20:22:08
-type: "categories"
----
-```
-
-* 重新运行 hexo s,就可以进入分类页面了
-
-
-
-## 归档页
-
-* 添加标签页
-* 运行 hexo new page archives
-* 生成 source/archives/index.md 文件和文件夹
-* 配置index.md
-
-```markdown
----
-title: tags
-date: 2019-12-19 20:22:08
-type: "archives"
----
-```
-
-* 重新运行 hexo s,就可以进入归档页面了
-
-
-
-## 关于页
-
-* 添加标签页
-* 运行 hexo new page about
-* 生成 source/about/index.md 文件和文件夹
-* 配置index.md
-
-```markdown
----
-title: tags
-date: 2019-12-19 20:22:08
-type: "about"
----
-```
-
-* 重新运行 hexo s,就可以进入关于页面了，https://iammrchen.gitee.io/about/
-
-
-
-
-
 
 
 
@@ -156,7 +77,14 @@ timezone: ''
 url: https://iammrchen.gitee.io/
  ```
 
+
+
+
+
+
+
 ## 修改导航栏显示
+
 * 进入项目主题下的next目录，选择文件themes/next/_config.yml
 * 找到menu配置，修改配置
 * 不显示可以选择删除或者注释掉
@@ -174,7 +102,9 @@ menu:
 
 
 
----
+
+
+
 
 ## 开启博客外链(github、微博等)
 
@@ -192,7 +122,9 @@ social:
 
 
 
----
+
+
+
 
 ## 开启博客右上角github图标
 
@@ -206,6 +138,12 @@ github_banner:
   permalink: https://你的github地址。
   title: Follow me on GitHub
 ```
+
+
+
+
+
+
 
 ## 更换头像
 
@@ -224,7 +162,117 @@ avatar:
   rotated: true
 ```
 
+
+
+
+
+
+
 ---
+
+## 首页显示文章预览
+
+* 进入项目主题下的next目录，选择文件themes/next/_config.yml
+
+* 找到auto_excerpt配置，修改配置
+
+* enable : true    显示预览
+
+* enable: false    显示全文
+
+```yaml
+auto_excerpt:
+  enable: false
+  length: 150
+```
+
+
+
+
+
+
+
+---
+
+## 添加页面
+
+### 标签页
+
+* 添加标签页
+* 运行 hexo new page tags
+* 生成 source/tags/index.md 文件和文件夹
+* 配置index.md
+
+```markdown
+---
+title: tags
+date: 2019-12-19 20:22:08
+type: "tags"
+---
+```
+
+* 重新运行 hexo s,就可以进入标签页面了
+
+
+
+---
+
+### 分类页
+
+* 添加标签页
+* 运行 hexo new page categories
+* 生成 source/categories/index.md 文件和文件夹
+* 配置index.md
+
+```markdown
+---
+title: tags
+date: 2019-12-19 20:22:08
+type: "categories"
+---
+```
+
+* 重新运行 hexo s,就可以进入分类页面了
+
+
+
+### 归档页
+
+* 添加标签页
+* 运行 hexo new page archives
+* 生成 source/archives/index.md 文件和文件夹
+* 配置index.md
+
+```markdown
+---
+title: tags
+date: 2019-12-19 20:22:08
+type: "archives"
+---
+```
+
+* 重新运行 hexo s,就可以进入归档页面了
+
+
+
+### 关于页
+
+* 添加标签页
+* 运行 hexo new page about
+* 生成 source/about/index.md 文件和文件夹
+* 配置index.md
+
+```markdown
+---
+title: tags
+date: 2019-12-19 20:22:08
+type: "about"
+---
+```
+
+* 重新运行 hexo s,就可以进入关于页面了，https://iammrchen.gitee.io/about/
+
+
 
 
 
